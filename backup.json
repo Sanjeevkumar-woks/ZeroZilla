@@ -1,0 +1,46 @@
+[
+    [
+    {
+        "_id": "632c8148c7ad28bbbf5a9fbe",
+        "agencyId": "1",
+        "agencyName": "mind technologies",
+        "address1": "2nd stage jaynagar 4th block",
+        "address2": "",
+        "state": "karnataka",
+        "city": "Banglore",
+        "phoneNumber": 5
+    },
+    {
+        "_id": "632c81acc7ad28bbbf5a9fc2",
+        "agencyId": "2",
+        "agencyName": "mind ",
+        "address1": "2nd stage jaynagar 4th block",
+        "address2": "",
+        "state": "karnataka",
+        "city": "Banglore",
+        "phoneNumber": 5
+    }
+]
+,
+[
+    {
+        "_id": "632c8148c7ad28bbbf5a9fbf",
+        "clientId": "1",
+        "agencyId": "1",
+        "clientName": "abcd tech",
+        "email": "xyz@xyz.com",
+        "phoneNumber": 0,
+        "totalBill": 25000
+    },
+    {
+        "_id": "632c81acc7ad28bbbf5a9fc3",
+        "clientId": "2",
+        "agencyId": "1",
+        "clientName": "xyz tech",
+        "email": "xyz@xyz.com",
+        "phoneNumber": 0,
+        "totalBill": 30000
+    }
+
+]
+]

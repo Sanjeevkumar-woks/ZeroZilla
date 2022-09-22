@@ -1,0 +1,36 @@
+import express from "express";
+import { MongoClient } from "mongodb";
+import cors from "cors";
+import dotenv from "dotenv";
+import { usersRouter } from "./routes/users.js";
+import { agencyClientRouter } from "./routes/agencyClient.js";
+
+export const app = express();
+dotenv.config();
+app.use(express.json());
+app.use(cors());
+
+const PORT = process.env.PORT || 9000;
+const MONGO_URL = "mongodb://localhost";
+
+async function createConnection() {
+  try {
+    const client = new MongoClient(MONGO_URL);
+    await client.connect();
+    console.log("Mongo is connected");
+    return client;
+  } catch (error) {
+    res.status(502).json({ error });
+  }
+}
+
+export const client = await createConnection();
+
+app.get("/", (req, res) => {
+  res.send("Welcome to Agency Client Managment Backend API's 😉");
+});
+
+app.use("/users", usersRouter);
+app.use("/agencyClient", agencyClientRouter);
+
+app.listen(PORT, () => console.log(`server running at ${PORT}`));

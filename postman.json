@@ -1,0 +1,190 @@
+{
+    "info": {
+    "_postman_id": "855b271f-f527-4dd3-befe-dca6b9216ace",
+    "name": "zeroZilla",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+    },
+    "item": [
+    {
+    "name": "Signup",
+    "id": "38e3d8e1-6e8e-40f5-ba50-3d0bd9709c29",
+    "request": {
+    "method": "POST",
+    "header": [ ],
+    "body": {
+    "mode": "raw",
+    "raw": "{\r\n    \"firstName\":\"SanjeevM\",\r\n    \"lastName\":\"Managutti\",\r\n    \"email\":\"Sanjeevmanagutti@gmail.com\",\r\n    \"password\":\"Sanjeev@123\"\r\n}",
+    "options": {
+    "raw": {
+    "language": "json"
+    }
+    }
+    },
+    "url": "http://localhost:9000/users/signup"
+    },
+    "response": [ ]
+    },
+    {
+    "name": "login",
+    "id": "16bf26e8-fc65-4c9c-942e-f14ec97ce6e3",
+    "request": {
+    "method": "POST",
+    "header": [ ],
+    "body": {
+    "mode": "raw",
+    "raw": "{\r\n    \"email\":\"Sanjeevmanagutti@gmail.com\",\r\n    \"password\":\"Sanjeev@123\"\r\n}",
+    "options": {
+    "raw": {
+    "language": "json"
+    }
+    }
+    },
+    "url": "http://localhost:9000/users/login"
+    },
+    "response": [ ]
+    },
+    {
+    "name": "CreateAgencyClinet",
+    "id": "49af8603-c086-489f-9e6f-4c4dc3ed514d",
+    "request": {
+    "method": "POST",
+    "header": [ ],
+    "body": {
+    "mode": "raw",
+    "raw": "{\r\n    \"agency\":{\r\n        \"agencyId\":\"1\",\r\n        \"agencyName\":\"mind technologies\",\r\n        \"address1\":\"2nd stage jaynagar 4th block\",\r\n        \"address2\":\"\",\r\n        \"state\":\"karnataka\",\r\n        \"city\":\"Banglore\",\r\n        \"phoneNumber\":5\r\n    },\r\n    \"client\":{\r\n        \"clientId\":\"1\",\r\n        \"agencyId\":\"1\",\r\n        \"clientName\":\"abcd tech\",\r\n        \"email\":\"xyz@xyz.com\",\r\n        \"phoneNumber\":0,\r\n        \"totalBill\":25000\r\n    }\r\n}",
+    "options": {
+    "raw": {
+    "language": "json"
+    }
+    }
+    },
+    "url": "http://localhost:9000/agencyClient/create"
+    },
+    "response": [ ]
+    },
+    {
+    "name": "GetAllAgencies",
+    "id": "c29596ca-3e66-4e68-8d52-26fd25498a42",
+    "request": {
+    "method": "GET",
+    "header": [
+    {
+    "key": "x-auth-token",
+    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMmM4NGVjZTcxOTJmYmViNzZkMTY4MSIsImlhdCI6MTY2Mzg2MjE3MX0.u1ujQJaQGdRfI32oh0HqR4XaAvoM2fESpE3rcfN_L2M",
+    "type": "text"
+    }
+    ],
+    "url": "http://localhost:9000/agencyClient/agencies"
+    },
+    "response": [ ]
+    },
+    {
+    "name": "GetAllClients",
+    "id": "6a86b463-3ed2-4f64-8101-f49eca18a4ed",
+    "request": {
+    "method": "GET",
+    "header": [
+    {
+    "key": "x-auth-token",
+    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMmM1ZWYxYzIzYTg4MWE4NzhiMTAzZiIsImlhdCI6MTY2Mzg1MzE3NH0.aXoJcSr_I-B_HbWJT-Ga7qSlaFfVF8hxSUNgN3oqwT0",
+    "type": "text"
+    }
+    ],
+    "url": "http://localhost:9000/agencyClient/clients"
+    },
+    "response": [ ]
+    },
+    {
+    "name": "UpdateClientById",
+    "id": "572a9b37-eadb-418f-88cc-6890ccb5c0ac",
+    "request": {
+    "method": "PUT",
+    "header": [
+    {
+    "key": "x-auth-token",
+    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMmM1ZWYxYzIzYTg4MWE4NzhiMTAzZiIsImlhdCI6MTY2Mzg1MzE3NH0.aXoJcSr_I-B_HbWJT-Ga7qSlaFfVF8hxSUNgN3oqwT0",
+    "type": "text"
+    }
+    ],
+    "body": {
+    "mode": "raw",
+    "raw": "{\r\n        \"clientId\":\"2\",\r\n        \"agencyId\":\"1\",\r\n        \"name\":\"xyz tech\",\r\n        \"email\":\"xyz@xyz.com\",\r\n        \"phoneNumber\":0,\r\n        \"totalBill\":35000\r\n    }",
+    "options": {
+    "raw": {
+    "language": "json"
+    }
+    }
+    },
+    "url": "http://localhost:9000/agencyClient/update/client/2"
+    },
+    "response": [ ]
+    },
+    {
+    "name": "UpdateAgencyById",
+    "id": "25e4cd40-7914-41af-871a-18d4d6c231c5",
+    "request": {
+    "method": "PUT",
+    "header": [
+    {
+    "key": "x-auth-token",
+    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMmM1ZWYxYzIzYTg4MWE4NzhiMTAzZiIsImlhdCI6MTY2Mzg1MzE3NH0.aXoJcSr_I-B_HbWJT-Ga7qSlaFfVF8hxSUNgN3oqwT0",
+    "type": "text"
+    }
+    ],
+    "body": {
+    "mode": "raw",
+    "raw": "",
+    "options": {
+    "raw": {
+    "language": "javascript"
+    }
+    }
+    },
+    "url": "http://localhost:9000/agencyClient/update/agency/1"
+    },
+    "response": [ ]
+    },
+    {
+    "name": "DeleteClientById",
+    "id": "faa8f037-4aa7-4667-9555-7b3841a9943c",
+    "request": {
+    "method": "DELETE",
+    "header": [
+    {
+    "key": "x-auth-token",
+    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMmM1ZWYxYzIzYTg4MWE4NzhiMTAzZiIsImlhdCI6MTY2Mzg1MzE3NH0.aXoJcSr_I-B_HbWJT-Ga7qSlaFfVF8hxSUNgN3oqwT0",
+    "type": "text"
+    }
+    ],
+    "url": "http://localhost:9000/agencyClient/delete/client/2"
+    },
+    "response": [ ]
+    },
+    {
+    "name": "DeleteAgencyById",
+    "id": "2f071762-4060-4a43-acb2-2bace31deeb4",
+    "request": {
+    "method": "DELETE",
+    "header": [
+    {
+    "key": "x-auth-token",
+    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMmM1ZWYxYzIzYTg4MWE4NzhiMTAzZiIsImlhdCI6MTY2Mzg1MzE3NH0.aXoJcSr_I-B_HbWJT-Ga7qSlaFfVF8hxSUNgN3oqwT0",
+    "type": "text"
+    }
+    ],
+    "url": "http://localhost:9000/agencyClient/delete/agency/1"
+    },
+    "response": [ ]
+    },
+    {
+    "name": "BestAgency",
+    "id": "57650f04-49ae-4524-824e-10f91502f616",
+    "request": {
+    "method": "GET",
+    "header": [ ],
+    "url": "http://localhost:9000/agencyClient/bestAgency"
+    },
+    "response": [ ]
+    }
+    ]
+    }
