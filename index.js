@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(cors());
 
 const PORT = process.env.PORT || 9000;
-const MONGO_URL = "mongodb://localhost";
+const MONGO_URL =  process.env.MONGO_URL || "mongodb://localhost";
 
 async function createConnection() {
   try {
