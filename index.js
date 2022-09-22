@@ -27,7 +27,7 @@ async function createConnection() {
 export const client = await createConnection();
 
 app.get("/", (req, res) => {
-  res.send("Welcome to Agency Client Managment Backend API's 😉");
+  res.send('<h1>Welcome to Agency Client Managment Backend APIs 😉</h1>');
 });
 
 app.use("/users", usersRouter);
