@@ -20,7 +20,7 @@ async function createConnection() {
     console.log("Mongo is connected");
     return client;
   } catch (error) {
-    res.status(502).json({ error });
+    console.log(error);
   }
 }
 
