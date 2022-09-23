@@ -26,9 +26,12 @@ async function createConnection() {
 
 export const client = await createConnection();
 
+// Method to display all the endpoints available.
 app.get("/", (req, res) => {
-  res.send('<h1>Welcome to Agency Client Managment Backend APIs 😉</h1>');
-});
+  fs.readFile('readme.html', 'utf-8', (err,data)=>{
+      err? res.send(err) : res.send(data)
+    })
+})
 
 app.use("/users", usersRouter);
 app.use("/agencyClient", agencyClientRouter);
